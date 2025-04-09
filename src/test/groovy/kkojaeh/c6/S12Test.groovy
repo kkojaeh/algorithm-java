@@ -13,11 +13,11 @@ class S12Test extends Specification {
 
   def "#input -> #result"() {
     expect:
-    s.solution(input) == result
+    s.solution(input as int[]) == result as int[]
 
     where:
-    input                    | result
-    [1, 2, 3, 2, 3] as int[] | [4, 3, 1, 1, 0] as int[]
+    input           | result
+    [1, 2, 3, 2, 3] | [4, 3, 1, 1, 0]
 
   }
 

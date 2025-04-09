@@ -13,12 +13,12 @@ class S16Test extends Specification {
 
   def "#progresses, #speeds -> #result"() {
     expect:
-    s.solution(progresses, speeds) == result
+    s.solution(progresses as int[], speeds as int[]) == result as int[]
 
     where:
-    progresses                        | speeds                      | result
-    [93, 30, 55] as int[]             | [1, 30, 5] as int[]         | [2, 1] as int[]
-    [95, 90, 99, 99, 80, 99] as int[] | [1, 1, 1, 1, 1, 1] as int[] | [1, 3, 2] as int[]
+    progresses               | speeds             | result
+    [93, 30, 55]             | [1, 30, 5]         | [2, 1]
+    [95, 90, 99, 99, 80, 99] | [1, 1, 1, 1, 1, 1] | [1, 3, 2]
 
   }
 
