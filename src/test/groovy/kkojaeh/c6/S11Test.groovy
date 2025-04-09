@@ -1,6 +1,6 @@
-package kkojaeh.c7
+package kkojaeh.c6
 
-import kkojaeh.c6.S11
+
 import spock.lang.Specification
 
 class S11Test extends Specification {

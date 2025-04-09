@@ -1,6 +1,6 @@
-package kkojaeh.c7
+package kkojaeh.c6
 
-import kkojaeh.c6.S09
+
 import spock.lang.Specification
 
 class S09Test extends Specification {

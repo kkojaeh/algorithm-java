@@ -1,6 +1,6 @@
-package kkojaeh.c7
+package kkojaeh.c6
 
-import kkojaeh.c6.S12
+
 import spock.lang.Specification
 
 class S12Test extends Specification {
