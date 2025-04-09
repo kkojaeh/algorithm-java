@@ -1,6 +1,7 @@
 package kkojaeh.c8;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 
 /**
@@ -10,14 +11,20 @@ import java.util.HashSet;
 public class S19 {
 
   public String solution(String[] participant, String[] completion) {
-    HashSet<String> set = new HashSet<>(Arrays.asList(completion));
+    HashMap<String, Integer> map = new HashMap<String, Integer>();
     for (String p : participant) {
-      if (set.contains(p)) {
-        set.remove(p);
-      } else {
-        return p;
+      int count = map.getOrDefault(p, 0) + 1;
+      map.put(p, count);
+    }
+    for (String c : completion) {
+      int count = map.get(c) - 1;
+
+      if(count == 0) {
+        map.remove(c);
+      }else {
+        map.put(c, count);
       }
     }
-    return null;
+    return map.keySet().stream().findFirst().get();
   }
 }
