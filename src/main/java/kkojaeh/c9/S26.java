@@ -19,3 +19,4 @@ public class S26 {
     return answer;
   }
 }
+
